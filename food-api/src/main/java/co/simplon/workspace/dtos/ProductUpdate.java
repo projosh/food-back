@@ -1,6 +1,6 @@
 package co.simplon.workspace.dtos;
 
-public class ProductCreate {
+public class ProductUpdate {
 
     private String barcode;
 
@@ -16,8 +16,9 @@ public class ProductCreate {
 
     private Long brandId;
 
-    public ProductCreate() {
-	super();
+    public ProductUpdate() {
+
+	//
 
     }
 
@@ -37,14 +38,6 @@ public class ProductCreate {
 	this.designation = designation;
     }
 
-    public String getPhotoLink() {
-	return photoLink;
-    }
-
-    public void setPhotoLink(String photoLink) {
-	this.photoLink = photoLink;
-    }
-
     public Boolean getLactose() {
 	return lactose;
     }
@@ -59,6 +52,14 @@ public class ProductCreate {
 
     public void setGluten(Boolean gluten) {
 	this.gluten = gluten;
+    }
+
+    public String getPhotoLink() {
+	return photoLink;
+    }
+
+    public void setPhotoLink(String photoLink) {
+	this.photoLink = photoLink;
     }
 
     public Long getCategoryId() {
@@ -76,4 +77,5 @@ public class ProductCreate {
     public void setBrandId(Long brandId) {
 	this.brandId = brandId;
     }
+
 }

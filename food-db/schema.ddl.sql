@@ -7,7 +7,7 @@
  */
 
 CREATE TABLE roles(
-id SERiAl PRIMARY KEY,
+id SERIAl PRIMARY KEY,
 name VARCHAR(255) UNIQUE NOT NULL
 
 );
@@ -21,21 +21,34 @@ CONSTRAINT fk_role_id FOREIGN KEY (role_id) REFERENCES roles(id)
 
 );
 
-CREATE TABLE products(id SERIAL PRIMARY KEY,
+CREATE TABLE brands(
+id SERIAL PRIMARY KEY,
+name VARCHAR(255) UNIQUE NOT NULL
+
+
+
+);
+
+CREATE TABLE categories(
+id SERIAL PRIMARY KEY,
+name VARCHAR(255) UNIQUE NOT NULL
+
+);
+
+CREATE TABLE products(
+id SERIAL PRIMARY KEY,
 barcode VARCHAR(60) UNIQUE NOT NULL,
 designation VARCHAR(255) NOT NULL,
 lactose BOOLEAN NOT NULL,
 gluten BOOLEAN NOT NULL,
-photo_link VARCHAR(255)
+photo_link VARCHAR(255),
+category_id INTEGER,
+brand_id INTEGER,
+CONSTRAINT fk_category_id FOREIGN KEY (category_id) REFERENCES categories(id),
+CONSTRAINT fk_brand_id FOREIGN KEY (brand_id) REFERENCES brands(id)
+
 );
 
-
-CREATE TABLE brands(id SERIAL PRIMARY KEY,
-name VARCHAR(255) UNIQUE NOT NULL);
-
-
-CREATE TABLE categories(id SERIAL PRIMARY KEY,
-name VARCHAR(255) UNIQUE NOT NULL);
 
 
 

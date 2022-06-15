@@ -43,7 +43,7 @@ CREATE TABLE products(
 	gluten BOOLEAN NOT NULL,
 	photo_link VARCHAR(255),
 	category_id INTEGER NOT NULL,
-	brand_id INTEGER NOT NULL,
+	brand_id INTEGER NOT NULL,/* retirer NOT NULL si j'utilise uniquement la category*/
 	CONSTRAINT fk_category_id FOREIGN KEY (category_id) REFERENCES categories(id),
 	CONSTRAINT fk_brand_id FOREIGN KEY (brand_id) REFERENCES brands(id)
 );

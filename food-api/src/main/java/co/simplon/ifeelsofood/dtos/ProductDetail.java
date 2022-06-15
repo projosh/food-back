@@ -13,4 +13,8 @@ public interface ProductDetail {
 
     String getPhotoLink();
 
+    String getCategoryId();
+
+    String getBrandId();
+
 }

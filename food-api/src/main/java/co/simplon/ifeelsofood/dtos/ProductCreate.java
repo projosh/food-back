@@ -2,7 +2,7 @@ package co.simplon.ifeelsofood.dtos;
 
 public class ProductCreate {
 
-    private String barcode;
+    private String barCode;
 
     private String designation;
 
@@ -21,12 +21,12 @@ public class ProductCreate {
 
     }
 
-    public String getBarcode() {
-	return barcode;
+    public String getBarCode() {
+	return barCode;
     }
 
-    public void setBarcode(String barcode) {
-	this.barcode = barcode;
+    public void setBarCode(String barCode) {
+	this.barCode = barCode;
     }
 
     public String getDesignation() {

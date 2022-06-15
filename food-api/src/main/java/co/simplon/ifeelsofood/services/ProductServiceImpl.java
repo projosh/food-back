@@ -42,7 +42,7 @@ public class ProductServiceImpl implements ProductService {
     @Transactional
     public void create(ProductCreate inputs) {
 	Product product = new Product();
-	product.setBarCode(inputs.getBarcode());
+	product.setBarCode(inputs.getBarCode());
 	product.setDesignation(inputs.getDesignation());
 	product.setLactose(inputs.getLactose());
 	product.setGluten(inputs.getGluten());
@@ -62,11 +62,12 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public void update(Long id, ProductUpdate inputs) {
 	Product product = products.findById(id).get();
-	product.setBarCode(inputs.getBarcode());
+	product.setBarCode(inputs.getBarCode());
 	product.setDesignation(inputs.getDesignation());
 	product.setLactose(inputs.getLactose());
 	product.setGluten(inputs.getGluten());
 	product.setPhotoLink(inputs.getPhotoLink());
+
 	products.save(product);
 
     }

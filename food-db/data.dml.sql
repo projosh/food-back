@@ -14,9 +14,9 @@ INSERT INTO users (username,password,role_id) VALUES
 INSERT INTO users (username,password,role_id) VALUES
 ('steve.berenger56@gmail.com', 'ironman', (SELECT r.id FROM roles r WHERE r.name  = 'client')); 
 
-INSERT INTO brands (name) VALUES ('Lu'), ('Danone'), ('Belin'), ('Ferrero'), ('Panzani') , ('Coca-Cola');
-
 INSERT INTO categories (name) VALUES ('Biscuits'), ('Sauces tomate'), ('Pâtes à tartiner'), ('Boissons') ;
+
+INSERT INTO brands (name) VALUES ('Lu'), ('Danone'), ('Belin'), ('Ferrero'), ('Panzani') , ('Coca-Cola');
 
 INSERT INTO products (barcode,designation,lactose,gluten,photo_link,category_id,brand_id) VALUES
 ('7622210449283', 
@@ -35,5 +35,9 @@ false,
 6
 ),('3017760002035','Petit écolier Chocolat fin',true,true,'https://fr.openfoodfacts.org/images/products/301/776/000/2035/front_fr.34.full.jpg',
 1,1),('8076809513388','Barilla sauce tomates arrabbiata 400g',false,false,'https://fr.openfoodfacts.org/images/products/807/680/951/3388/front_fr.184.400.jpg',4,2),
-('8000500310427','Nutella Biscuit',true,true,'https://fr.openfoodfacts.org/images/products/800/050/031/0427/ingredients_fr.95.400.jpg',4,3);
+('8000500310427','Nutella Biscuit',true,true,'https://fr.openfoodfacts.org/images/products/800/050/031/0427/ingredients_fr.95.400.jpg',4,3),
+('3033491214509','Actimel 0% - Danone - 800 g',true,false,'https://fr.openfoodfacts.org/images/products/303/349/121/4509/front_fr.75.full.jpg',4,2),
+('7622300689124','Granola Gros éclats de Chocolat - LU - 276 g',true,true,'https://fr.openfoodfacts.org/images/products/762/230/068/9124/front_fr.149.full.jpg',1,1),
+('3038359005220','Panzani - spf - sauce provençale - 425 g',false,false,'https://fr.openfoodfacts.org/images/products/303/835/900/5220/front_fr.96.full.jpg',2,5);
+
 
